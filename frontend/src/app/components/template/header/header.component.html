@@ -1,0 +1,20 @@
+
+<!-- Navbar do material design -->
+<mat-toolbar class="header mat-elevation-z6">
+    <span>
+        <a routerLink="/">
+            <img class="logo" src="assets/img/logo.png" alt="Logo do site">
+        </a>
+    </span>
+    <span class="title-group">
+
+        <!-- Os valores são pegados por meio dos métodos get's no .ts do componente -->
+        <a routerLink="{{ routeUrl }}">
+            <i class="material-icons">
+                {{ icon }}
+            </i>
+            {{ title }}
+        </a>
+        
+    </span>
+</mat-toolbar>

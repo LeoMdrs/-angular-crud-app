@@ -1,0 +1,23 @@
+<mat-card>
+    <mat-card-title>Você deseja realmente deletar este Produto?</mat-card-title>
+    
+    <!-- Formulário -->
+    <!-- Pega os valores do produto em questão, que são pegos pelo componente no método ngOnInit() -->
+    <!-- Mostra os valores do produto nos campos do formulario -->
+    <form action="">
+        <mat-form-field>
+            <input matInput placeholder="Nome" [value]="product.name" name="name" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Preço (R$)" [value]="product.price" name="price" disabled>
+        </mat-form-field>
+    </form>
+    
+    <button mat-raised-button (click)="deleteProduct()" color="accent">
+        Confirmar
+    </button>
+    
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>
